@@ -1,0 +1,14 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_SQL_DATABASE: under_stream
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3306:3306"
